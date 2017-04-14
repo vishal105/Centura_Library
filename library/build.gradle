@@ -1,0 +1,82 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
+
+//group='com.github.vishal105'
+
+android {
+    publishNonDefault true
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    provided 'com.android.support:recyclerview-v7:25.0.1'
+}
+
+/*
+// Android library
+apply plugin: 'com.android.library'
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+task generateJavadocsJar(type: Jar) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+generateJavadocsJar.dependsOn generateJavadocs
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}
+bintray {
+    user = 'centuratechnologies'
+    key = '77b2109fbf2fcdfd06360ca7579d964d965a78ac'
+    pkg {
+        repo = 'maven'
+        name = 'com.github.centura_technologies.mystoredll'
+
+        version {
+            name = '10-mystoredll'
+            desc = 'library for Mystore Application'
+            released  = new Date()
+            vcsTag = '10'
+        }
+
+        licenses = ['Apache-2.0']
+        //vcsUrl = 'https://github.com/centura/MyStore.git   '
+        //websiteUrl = 'https://github.com/centura/MyStoreDll'
+    }
+    configurations = ['archives']
+}
+*/

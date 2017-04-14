@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1014210943648",
+    "firebase_url": "https://centuralibrary-e6193.firebaseio.com",
+    "project_id": "centuralibrary-e6193",
+    "storage_bucket": "centuralibrary-e6193.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014210943648:android:408ac8eef58e621f",
+        "android_client_info": {
+          "package_name": "com.example.vishal.centura_library"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014210943648-8s59kb5h4svjdm94ndvt9ojo9ve6le89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArn8Rg3u9z5KyWrLhoAMuu3oslSIJgG88"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
